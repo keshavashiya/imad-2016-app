@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles = {
-`article-one: {
+ articleOne: {
     title: 'Article One | Keshav Ashiya',
     heading: 'Article One',
     date: 'Sep 5, 2016',
@@ -21,7 +21,7 @@ var articles = {
           This is the contant for my frst article.This is the contant for my frst article.This is the contant for my frst article.This is the contant for my frst article.This is the contant for my frst article.This is the contant for my frst article.
       </p> `
     },
-`article-two: {
+ articleTwo: {
     title: 'Article Two | Keshav Ashiya',
     heading: 'Article Two',
     date: 'Sep 10, 2016',
@@ -29,8 +29,8 @@ var articles = {
       <p>
           This is the contant for my second article.
       </p>`
-},
-`article-three: {
+    },
+ articleThree: {
   title: 'Article Three | Keshav Ashiya',
   heading: 'Article Three',
   date: 'Sep 15, 2016',
@@ -38,7 +38,7 @@ var articles = {
          <p>
           This is the contant for my thired article.
       </p>`
-}
+   }
 };
 function createTemplate (data) {
     var title = data.title;
@@ -53,9 +53,9 @@ function createTemplate (data) {
        </title>
       <meta name='viewport' content="width=device-width, initial-scale=1" />
       <link href="/ui/style.css" rel="stylesheet" />
-  </head>
-  <body>
-    <div class="container">
+     </head>
+     <body>
+      <div class="container">
       <div>
           <a href="/">Home</a>
       </div>
@@ -69,18 +69,18 @@ function createTemplate (data) {
       <div>
         ${content}
       </div>
-    </div>
-  </body>
-</html>  
-`;
-return htmlTemplate;
+      </div>
+     </body>
+   </html>  
+   `;
+   return htmlTemplate;
 }
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:articleName', function(req, res) {
+app.get('/:articleName', function (req, res) {
   var articleName = req.params.articleName;
   res.send(createTemplate(articles[articleName]));
 });

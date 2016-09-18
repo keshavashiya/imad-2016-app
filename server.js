@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles = {
-    articleOne: {
+`articleOne: {
     title: 'Article One | Keshav Ashiya',
     heading: 'Article One',
     date: 'Sep 5, 2016',
@@ -21,7 +21,7 @@ var articles = {
           This is the contant for my frst article.This is the contant for my frst article.This is the contant for my frst article.This is the contant for my frst article.This is the contant for my frst article.This is the contant for my frst article.
       </p> `
     },
-    articleTwo: {
+`articleTwo: {
     title: 'Article Two | Keshav Ashiya',
     heading: 'Article Two',
     date: 'Sep 10, 2016',
@@ -30,7 +30,7 @@ var articles = {
           This is the contant for my second article.
       </p>`
 },
-    articleThree: {
+`articleThree: {
   title: 'Article Three | Keshav Ashiya',
   heading: 'Article Three',
   date: 'Sep 15, 2016',

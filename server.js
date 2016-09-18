@@ -6,11 +6,11 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles = {
- `article-one: {
-  title: 'Article One | Keshav Ashiya',
-  heading: 'Article One',
-  date: 'Sep 5, 2016',
-  content:    
+    articleOne: {
+    title: 'Article One | Keshav Ashiya',
+    heading: 'Article One',
+    date: 'Sep 5, 2016',
+    content:`    
       <p>
           This is the contant for my frst article.This is the contant for my frst article.This is the contant for my frst article.This is the contant for my frst article.This is the contant for my frst article.This is the contant for my frst article.
       </p>
@@ -19,39 +19,38 @@ var articles = {
       </p>
       <p>
           This is the contant for my frst article.This is the contant for my frst article.This is the contant for my frst article.This is the contant for my frst article.This is the contant for my frst article.This is the contant for my frst article.
-      </p> 
-},
- `article-two: {
-  title: 'Article Two | Keshav Ashiya',
-  heading: 'Article Two',
-  date: 'Sep 10, 2016',
-  content: 
-         <p>
+      </p> `
+    },
+    articleTwo: {
+    title: 'Article Two | Keshav Ashiya',
+    heading: 'Article Two',
+    date: 'Sep 10, 2016',
+    content: `
+      <p>
           This is the contant for my second article.
-      </p>
+      </p>`
 },
- `article-three: {
+    articleThree: {
   title: 'Article Three | Keshav Ashiya',
   heading: 'Article Three',
   date: 'Sep 15, 2016',
-  content: 
+  content: `
          <p>
           This is the contant for my thired article.
-      </p>
+      </p>`
 }
 };
 function createTemplate (data) {
-var title = data.title;
-var date = data.date;
-var heading = data.heading;
-var content = data.content;
-
-var htmlTemplate = `
-<html>
-  <head>
-      <title>
+    var title = data.title;
+    var date = data.date;
+    var heading = data.heading;
+    var content = data.content;
+    var htmlTemplate = `
+     <html>
+      <head>
+       <title>
         ${title}
-      </title>
+       </title>
       <meta name='viewport' content="width=device-width, initial-scale=1" />
       <link href="/ui/style.css" rel="stylesheet" />
   </head>
@@ -77,13 +76,11 @@ var htmlTemplate = `
 return htmlTemplate;
 }
 
-
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:articleName', function(req, res){
-    //articleName == article-one
+app.get('/:articleName', function(req, res) {
   var articleName = req.params.articleName;
   res.send(createTemplate(articles[articleName]));
 });

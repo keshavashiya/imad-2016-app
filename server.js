@@ -10,8 +10,8 @@ var articles = {
     title: 'Article One | Keshav Ashiya',
     heading: 'Article One',
     date: 'Sep 5, 2016',
-    content:`    
-      <p>
+    content:`
+      <p> 
           This is the contant for my frst article.This is the contant for my frst article.This is the contant for my frst article.This is the contant for my frst article.This is the contant for my frst article.This is the contant for my frst article.
       </p>
       <p>

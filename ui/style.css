@@ -1,6 +1,6 @@
 body {
-    font-family: Allegro;
-    margin-top: 75px;
+    font-family: BAZOOKA;
+    margin-top: 60px;
 }
 
 .center {
@@ -23,7 +23,6 @@ body {
     margin: 0 auto;
     color: grey;
     font-family: BAZOOKA;
-    padding-top: 60px;
     padding-left: 20px;
     padding-right: 20px;
 }  

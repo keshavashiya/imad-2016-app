@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles = {
- articleOne: {
+ `article-one: {
     title: 'Article One | Keshav Ashiya',
     heading: 'Article One',
     date: 'Sep 5, 2016',
@@ -21,7 +21,7 @@ var articles = {
           This is the contant for my frst article.This is the contant for my frst article.This is the contant for my frst article.This is the contant for my frst article.This is the contant for my frst article.This is the contant for my frst article.
       </p> `
     },
- articleTwo: {
+ `article-two: {
     title: 'Article Two | Keshav Ashiya',
     heading: 'Article Two',
     date: 'Sep 10, 2016',
@@ -30,7 +30,7 @@ var articles = {
           This is the contant for my second article.
       </p>`
     },
- articleThree: {
+ `article-three: {
   title: 'Article Three | Keshav Ashiya',
   heading: 'Article Three',
   date: 'Sep 15, 2016',
@@ -84,6 +84,7 @@ app.get('/:articleName', function (req, res) {
   var articleName = req.params.articleName;
   res.send(createTemplate(articles[articleName]));
 });
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));

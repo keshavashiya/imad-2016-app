@@ -38,8 +38,8 @@ button.onclick = function () {
   request.open('GET', "http://keshavashiya.imad.hasura-app.io/counter", true);
   request.send(null);
   
-  //rander the variable in correct span
+ /* //rander the variable in correct span
   counter = counter + 1;
   var span = document.getElementById('count');
-  span.InnerHTML = counter.toString();
+  span.InnerHTML = counter.toString();*/
 };

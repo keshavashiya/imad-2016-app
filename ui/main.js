@@ -14,10 +14,9 @@ img.onclick = function () {
     var interval = setInterval(moveLeft, 10);
 };
 
- /*//counter code
+ //counter code
 var button = document.getElementById('counter');
-var counter = 0;*/
-
+var counter = 0;
 button.onclick = function () {
   //create a request to the counter
   var request = new XMLRequest();
@@ -38,8 +37,8 @@ button.onclick = function () {
   request.open('GET', "http://keshavashiya.imad.hasura-app.io/counter", true);
   request.send(null);
   
- /* //rander the variable in correct span
+ //rander the variable in correct span
   counter = counter + 1;
   var span = document.getElementById('count');
-  span.InnerHTML = counter.toString();*/
+  span.InnerHTML = counter.toString();
 };

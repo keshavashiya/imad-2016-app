@@ -4,7 +4,7 @@ console.log('Loaded!');
 
 //move the image
 
-/*var img = document.getElementById('madi');
+var img = document.getElementById('madi');
 var marginRight = 0;
 function moveLeft () {
     marginRight = marginRight + 1;
@@ -12,7 +12,7 @@ function moveLeft () {
 }
 img.onclick = function () {
     var interval = setInterval(moveLeft, 10);
-};*/
+};
 
  //counter code
 var button = document.getElementById('counter');
@@ -37,8 +37,8 @@ button.onclick = function () {
   request.open('GET', "http://keshavashiya.imad.hasura-app.io/counter", true);
   request.send(null);
   
- /*//rander the variable in correct span
+ //rander the variable in correct span
   counter = counter + 1;
   var span = document.getElementById('count');
-  span.InnerHTML = counter.toString();*/
+  span.InnerHTML = counter.toString();
 };
